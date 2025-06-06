@@ -36,10 +36,12 @@ body {
 
 .navbar-title a:hover{
     text-decoration: underline;
+    font-weight: bold;
 }
 
 .navbar-links a:hover {
     text-decoration: underline;
+    font-weight: bold;
 }
 
 .container {
@@ -438,6 +440,58 @@ img {
     
     .submit-button {
         width: 100%;
+    }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #a020f0;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background: #8a1ad0;
+    transform: translateY(-3px);
+}
+
+.scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive styles for scroll to top button */
+@media screen and (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .scroll-to-top svg {
+        width: 20px;
+        height: 20px;
     }
 }
 
